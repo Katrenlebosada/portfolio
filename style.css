@@ -1,0 +1,363 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+    
+}
+
+.navbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.397);
+    position: sticky;
+    top: 0;
+}
+.navbar ul{
+    display: flex;
+    list-style: none;
+    margin: 20px 0px;
+}
+.navbar ul li{
+    font-family: century;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+.navbar ul li a{
+    text-decoration: none;
+    color: white;
+    padding: 8px 25px;
+    transition: all .5s ease ;
+
+}
+.navbar ul li a:hover{
+    background-color: white;
+    color: rgb(7, 7, 7);
+    box-shadow: 0 0 10px rgb(39, 38, 38);
+}
+
+/*HOME SECTION*/
+#home{
+    display: flex;
+    flex-direction:column ;
+    background-color: rgba(0, 0, 0, 0.397);
+    height: 840px;
+    justify-content: center;
+    align-items: white;
+    
+}
+
+#home::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: url(img/img1.jpg) no-repeat center center/cover;
+    height: 900px;
+    width: 100%;
+    z-index: -1;
+    opacity: .8;
+}
+.main{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgba(226, 207, 207, 0.007);
+    align-items: center;
+    position: absolute;
+    top: 30%;
+    left: 5%;
+}
+.headings{
+    font-family: century;
+    font-size: 3rem;
+    text-align: center;
+    margin: 40px 0px;
+}
+.btn{
+    padding: 10px 35px;
+    background-color: transparent;
+    border: 1px solid rgba(182, 178, 178, 0.068);
+    color: white;
+    outline: none;
+    transition: .6s ease;
+}
+.btn:hover{
+    cursor: pointer;
+    color: rgb(7, 7, 7);
+    box-shadow: 0 0 10px rgb(224, 222, 222); 
+    font-weight: bold;
+   
+}
+/*ABOUT SECTION*/
+#about{
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 20px;
+    margin-bottom: 50px;
+}
+#photo{
+    display: flex;
+}
+#photo img{
+    width: 600px;
+    height: 500px
+}
+#intro{
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+    padding: 10px;
+}
+#intro h2{
+    font-size: 2rem;
+    margin-bottom: 20px;
+
+}
+/*EDUCATION SECTION*/
+#education{
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(7, 7, 7, 0.801);
+    color: white;
+    
+    
+}
+.gallery{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    box-sizing: border-box;
+    margin: 10px;
+    
+}
+.gallery img{
+    width:360px;
+    height: 250px;
+    margin: 36px 0 152px 0;
+}
+/*HOBBIES SECTION*/
+#hobbies{
+    display: flex;
+    flex-direction: column;
+    color: rgb(8, 8, 8); 
+}
+.hob{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    box-sizing: border-box;
+}
+.hob img{
+    width:360px;
+    height: 250px;
+    margin: 36px 0 152px 0;
+}
+
+/*MY WORK SECTION*/
+#mywork{
+    display: flex;
+    flex-direction: column;
+    color: rgb(8, 8, 8); 
+}
+.work{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    box-sizing: border-box;
+}
+.work img{
+    width:360px;
+    height: 250px;
+    margin: 36px 0 152px 0;
+}
+/*CONTACTS SECTION*/
+#contacts{
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(7, 7, 7, 0.801);
+    color: white;
+}
+.contact-items{
+    display: flex;
+    flex-direction: inline;
+    justify-content: space-between;
+    text-align: center;
+    margin: 150px;
+}
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 1em;
+    text-align: center;
+    margin-bottom: -785px;
+    width: 50%;
+    margin-left: 648px;
+    font-size: 1em;
+}
+@media(max-width: 1850px){
+    section{
+        padding: 0 8%;
+        transition: .2s;
+    }
+    .navbar{
+        left: 8%;
+        transition: .2s;
+    }
+}
+@media(max-width: 1850px){
+    section{
+        padding: 0 4%;
+        transition: .2s;
+    }
+    .navbar{
+        left: 4%;
+        transition: .2s;
+    }
+
+
+} 
+@media(max-width: 1020px){
+    .navbar a{
+        margin: 0 15px;
+        transition: 2s;
+    } 
+}
+@media(max-width: 950px){
+    .navbar{
+        display: none;
+    }
+    section{
+        padding: 70px 4%;
+    }
+    #home{
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    #home-text{
+        order: 2;
+    }
+}
+@media(max-width: 850px){
+    .navbar{
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        padding: 40px 50px;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        transition: all 0.4 ease-in-out;
+    }
+}
+@media(max-width: 500px){
+    .navbar{
+        display: none;
+    }
+    section{
+        padding: 70px 4%;
+    }
+    #about{
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+        width: 50px;
+    }
+    #about-text{
+        order: 2;
+    }
+    #about-headings{
+        font-size: 40px;
+    }
+}
+@media(max-width: 500px){
+    .navbar{
+        display: none;
+    }
+    section{
+        padding: 70px 4%;
+    }
+    #education{
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+        width: 50px;
+    }
+    #education-text{
+        order: 2;
+    }
+    #education-headings{
+        font-size: 40px;
+    }
+}
+@media(max-width: 500px){
+    .navbar{
+        display: none;
+    }
+    section{
+        padding: 70px 4%;
+    }
+    #hobbies{
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+        width: 50px;
+    }
+    #hobbies{
+        order: 2;
+    }
+    #hobbies-headings{
+        font-size: 40px;
+    }
+}
+@media(max-width: 500px){
+    .navbar{
+        display: none;
+    }
+    section{
+        padding: 70px 4%;
+    }
+    #mywork{
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+        width: 50px;
+    }
+    #mywork-text{
+        order: 2;
+    }
+    #mywork-headings{
+        font-size: 40px;
+    }
+}
+@media(max-width: 500px){
+    .navbar{
+        display: none;
+    }
+    section{
+        padding: 70px 4%;
+    }
+    #contacts{
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+        width: 50px;
+    }
+    #contacts-text{
+        order: 2;
+    }
+    #contacts-headings{
+        font-size: 40px;
+    }
+}
+
+
+
+
